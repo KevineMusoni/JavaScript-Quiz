@@ -5,7 +5,12 @@ span{
 h1{
 	text-align: center;
 	background-image: url("head.jpg");
-	height: 200px;
+	height: 400px;
+	font-style:
+}
+img{
+	height: 180px;
+	border-radius: 0.8px;
 }
 .headnav {
     overflow: hidden;
@@ -25,9 +30,17 @@ h1{
     background-color: #ddd;
     color: black;
 }
-
 /*ACTIVE LINKS*/
 .headnav a.active {
     background-color: #4CAF50;
     color: white;
+}
+#qn{
+	font-size: 20px;
+}
+#field{
+	margin-left:300px;
+	background-image: url("body.jpg");
+	color: white;
+	margin-right: 150px;
 }

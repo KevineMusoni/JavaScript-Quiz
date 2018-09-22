@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+       <title>Quiz</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="form.css">
+  </head>
+  <body class="text-center">
+  	<h1>
+	  <div class="headnav">
+         <a class="active" href="#">Home</a>
+         <a href="form2.html">Take the Quiz</a>
+         <a href="#">About us</a>
+</div>
+	    <div class="container">
+		  JavaScript Quiz<br>
+			<span>Take a Quiz & Develop your Skills:)</span><br>
+			<span id="title"> Register Now!<br>
+				<img src="writing-smiley (1).gif"></span>
+		</h1>
+    <form class="form-signin" action="/signup" method="POST">
+      <label for="inputfirstname" class="sr-only">First name</label>
+      <input type="firstname" id="inputfirstname" class="form-control" placeholder="First name" name="firstname" required autofocus>
+
+      <label for="inputsecondname" class="sr-only">Last name</label>
+      <input type="text" id="inputsecondname" class="form-control" placeholder="Last name" name="lastname" required autofocus>
+
+      <label for="phonenumber" class="sr-only">Phone number</label>
+      <input type="text" id="phonenumber" class="form-control" placeholder="Phone number" name="phonenumber" required autofocus>
+
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="email" required autofocus>
+
+      <label for="username" class="sr-only">Username</label>
+      <input type="text" id="username" class="form-control" placeholder="Username" name="username" required autofocus>
+
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+
+      
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    </form>
+  </body>
+</html>
