@@ -8,6 +8,12 @@ h1{
 	height: 300px;
 	font-style:italic;
 }
+body{
+	background: url("px;.jpg") no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 500px;
+}
 img{
 	height: 130px;
 	border-radius:8px;
@@ -42,7 +48,7 @@ img{
 	margin-left:300px;
 	background-image: url("body.jpg");
 	color: white;
-	margin-right: 150px;
+	margin-right: 300px;
 }
 button{
 	margin-left: 80px;
