@@ -7,60 +7,62 @@
 div#test{ border:#000 1px solid; padding:10px 40px 40px 40px; }
 </style>
 <script>	
-var pos = 0, test, test_status, question, choice, choices, strA, strB, strC, correct = 0;
-var questions = [
+	// User Interface and Back-end are separated
+	// Camel-case js used
+    var pos = 0, test, test_status, question, choice, choices, strA, strB, strC, correct = 0;
+    var my_questions = [
     [ "Inside which HTML element do we put JavaScript?", "&lt;javascript&gt;", "&lt;script&gt;", "&lt;js&gt;", "B" ],
 	[ "How do you create a function in JavaScript?", "function:myFunction()", "function myFunction()", "function = myFunction()", "B" ],
 	[ "Where is the correct place to insert JavaScript?", "The &lt;head&gt;section", "Both the &lt;head&gt; section and the &lt;body&gt; section are correct", "The&lt;body&gt;section", "A" ],
 	[ "The external JavaScript file must contain the &lt;script&gt; tag.", "true", "maybe", "false", "C" ]
-];
-function _(x){
+  ];
+    function _(x){
 	return document.getElementById(x);
-}
-// returns the object document
-function renderQuestion(){
+    }
+       // returns the object document
+     function renderQuestion(){
 	test = _("test");
-	if(pos >= questions.length){
-		test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+	if(pos >= my_questions.length){
+		test.innerHTML = "<h2>You got "+correct+" of "+my_questions.length+" my_questions correct</h2>";
 		_("test_status").innerHTML = "Test Completed";
 		pos = 0;
 		correct = 0;
 		return false;
 	}
-	_("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+	_("test_status").innerHTML = "Question "+(pos+1)+" of "+my_questions.length;
 	// targeting the questions above as declared
 
-	question = questions[pos][0];
-	strA = questions[pos][1];
-	strB = questions[pos][2];
-	strC = questions[pos][3];
+	question = my_questions[pos][0];
+	strA = my_questions[pos][1];
+	strB = my_questions[pos][2];
+	strC = my_questions[pos][3];
 	test.innerHTML = "<h3>"+question+"</h3>";
 	test.innerHTML += "<input type='radio' name='choices' value='A'> "+strA+"<br>";
 	test.innerHTML += "<input type='radio' name='choices' value='B'> "+strB+"<br>";
 	test.innerHTML += "<input type='radio' name='choices' value='C'> "+strC+"<br><br>";
 	test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
-}
-// should append with a += sign
-	// multiple choices A,B & C
-function checkAnswer(){
+    }
+         // should append with a += sign
+	    // multiple choices A,B & C
+   function checkAnswer(){
 	choices = document.getElementsByName("choices");
 	for(var i=0; i<choices.length; i++){
 		if(choices[i].checked){
 			choice = choices[i].value;
 		}
 	}
-	if(choice == questions[pos][4]){
+	if(choice == my_questions[pos][4]){
 		correct++;
 	}
 	pos++;
 	renderQuestion();
-}
-window.addEventListener("load", renderQuestion, false);
-</script>
-</head>
-<body class="text-center">
-<h2 id="test_status"></h2>
-<div id="test"></div>
-<a href="index.html" class="button button-accent" button-small>>Back</a>
+     }
+     window.addEventListener("load", renderQuestion, false);
+  </script>
+  </head>
+ <body class="text-center">
+  <h2 id="test_status"></h2>
+  <div id="test"></div>
+  <a href="index.html" class="button button-accent" button-small>>Back</a>
 </body>
-</html>
+</html>     
