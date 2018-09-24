@@ -14,7 +14,7 @@ github link : https://github.com/KevineMusoni/JavaScript-Quiz.git
 | input(Questions) |      example  | output        |
 |---------------   |:-------------:|------:        |
 | Choose          |  A, B, C       |  0,1,2,3,4    |
-| choose          |    A, B, C     |  0,1,2,4      |
+| choose          |    A, B, C     |  0,1,2,3,4    |
 | choose          |   A,B,C        |  0,1,2,3,4    |
 | choose          |   A,B,C        |  0,1,2,3,4    |
 ## Technologies Used
